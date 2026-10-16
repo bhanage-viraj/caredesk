@@ -5,8 +5,11 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27-alpine
-RUN addgroup -S caredesk && adduser -S caredesk -G caredesk \
+FROM nginx:1.29-alpine
+RUN apk update \
+    && apk upgrade --no-cache \
+    && addgroup -S caredesk \
+    && adduser -S caredesk -G caredesk \
     && mkdir -p /var/cache/nginx /tmp \
     && chown -R caredesk:caredesk /var/cache/nginx /tmp /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
