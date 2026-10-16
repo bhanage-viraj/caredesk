@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>CareDesk Presentation</title>
+<style>@page{size:A4;margin:1.5cm} body{font-family:Helvetica,Arial,sans-serif;color:#10231f}
+h1{color:#0f766e;font-size:28px} h2{page-break-before:always;color:#0b4f4a;border-bottom:2px solid #8fd6c4;padding-bottom:.4rem}
+h2:first-of-type{page-break-before:avoid} ul{line-height:1.6} pre{background:#eaf4f0;padding:12px;border-radius:8px}</style></head><body>
+<h1>CareDesk — Capstone Presentation</h1>
+<h2>Slide 1 — Project overview</h2>
+<li>**CareDesk**: clinic appointment management SaaS</li>
+<li>Goal: show the full path from laptop → GitHub → CI → GHCR → AWS EKS → monitoring</li>
+<li>Domain is clinic operations (not a TaskBoard clone)</li>
+<h2>Slide 2 — Tech stack</h2>
+<li>React + Vite + Nginx</li>
+<li>FastAPI + SQLAlchemy + Alembic + PostgreSQL</li>
+<li>Pytest, Docker Compose</li>
+<li>GitHub Actions, Trivy, GHCR</li>
+<li>Terraform, EKS, Helm, Ingress, HPA</li>
+<li>Prometheus + Grafana + Argo CD</li>
+<h2>Slide 3 — Architecture</h2>
+<p>Browser → Ingress/Nginx → Frontend | /api → Backend → PostgreSQL</p>
+<p>                                      ↓</p>
+<p>                               /metrics → Prometheus → Grafana</p>
+<li>`/health` = liveness, `/ready` = DB readiness</li>
+<h2>Slide 4 — CI/CD flow</h2>
+<p>1. Push to `main`</p>
+<p>2. Pytest + frontend build</p>
+<p>3. Docker build (backend + frontend)</p>
+<p>4. Trivy HIGH/CRITICAL gate</p>
+<p>5. Push SHA-tagged images to GHCR</p>
+<p>6. Optional Helm deploy with `KUBE_CONFIG`</p>
+<h2>Slide 5 — Infrastructure (Terraform)</h2>
+<li>Region: `ap-south-1`</li>
+<li>VPC, 2 public + 2 private subnets, NAT, IGW</li>
+<li>EKS cluster + managed node group</li>
+<li>Destroy after demo to control cost</li>
+<h2>Slide 6 — Kubernetes setup</h2>
+<li>Namespace `caredesk`</li>
+<li>Helm chart: deployments, services, postgres PVC, ingress, HPA, ServiceMonitor</li>
+<li>Argo CD Application syncs the Helm path from Git</li>
+<h2>Slide 7 — Observability</h2>
+<li>Backend `/metrics` (Prometheus format)</li>
+<li>ServiceMonitor scrapes backend</li>
+<li>Grafana dashboard: request rate, latency, errors</li>
+<li>HPA scales backend on CPU</li>
+<h2>Slide 8 — Key learnings</h2>
+<li>Tests before image promotion</li>
+<li>SHA tags = production ↔ commit traceability</li>
+<li>Ingress is config; controller implements it</li>
+<li>Services select pods by labels</li>
+<li>IaC + GitOps reduce snowflake clusters</li>
+</body></html>

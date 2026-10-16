@@ -1,0 +1,109 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 112 >>
+stream
+BT /F1 28 Tf 50 700 Td (CareDesk Capstone) Tj 0 -40 Td /F1 14 Tf (Clinic appointment SaaS ? laptop to EKS) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 143 >>
+stream
+BT /F1 28 Tf 50 700 Td (Tech Stack) Tj 0 -40 Td /F1 14 Tf (React, FastAPI, Postgres, Docker, Actions, Trivy, Terraform, Helm, Prometheus) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 146 >>
+stream
+BT /F1 28 Tf 50 700 Td (Architecture) Tj 0 -40 Td /F1 14 Tf (Ingress/Nginx -> Frontend + /api Backend -> PostgreSQL; /metrics -> Prometheus) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 126 >>
+stream
+BT /F1 28 Tf 50 700 Td (CI/CD) Tj 0 -40 Td /F1 14 Tf (pytest -> build -> Trivy -> GHCR SHA tags -> optional Helm deploy) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+12 0 obj
+<< /Length 127 >>
+stream
+BT /F1 28 Tf 50 700 Td (Terraform) Tj 0 -40 Td /F1 14 Tf (VPC, public/private subnets, NAT, EKS node group in ap-south-1) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 14 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+14 0 obj
+<< /Length 138 >>
+stream
+BT /F1 28 Tf 50 700 Td (Kubernetes) Tj 0 -40 Td /F1 14 Tf (Helm chart: deployments, services, ingress, HPA, ServiceMonitor, Argo CD) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 16 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+16 0 obj
+<< /Length 125 >>
+stream
+BT /F1 28 Tf 50 700 Td (Observability) Tj 0 -40 Td /F1 14 Tf (Prometheus UP targets + Grafana HTTP rate/latency panels) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 18 0 R /Resources << /Font << /F1 19 0 R >> >> >>
+endobj
+18 0 obj
+<< /Length 137 >>
+stream
+BT /F1 28 Tf 50 700 Td (Learnings) Tj 0 -40 Td /F1 14 Tf (Quality gates, SHA traceability, label selectors, destroy AWS after demo) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000161 00000 n 
+0000000288 00000 n 
+0000000451 00000 n 
+0000000578 00000 n 
+0000000772 00000 n 
+0000000899 00000 n 
+0000001096 00000 n 
+0000001224 00000 n 
+0000001402 00000 n 
+0000001531 00000 n 
+0000001710 00000 n 
+0000001839 00000 n 
+0000002029 00000 n 
+0000002158 00000 n 
+0000002335 00000 n 
+0000002464 00000 n 
+0000002653 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+2724
+%%EOF
