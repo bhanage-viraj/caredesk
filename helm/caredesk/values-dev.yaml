@@ -1,0 +1,14 @@
+ingress:
+  enabled: true
+  className: nginx
+  host: caredesk.local
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "8m"
+
+backend:
+  image:
+    pullPolicy: Always
+
+frontend:
+  image:
+    pullPolicy: Always

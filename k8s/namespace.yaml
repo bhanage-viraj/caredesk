@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: caredesk
+  labels:
+    app.kubernetes.io/name: caredesk
+    purpose: devops-capstone
