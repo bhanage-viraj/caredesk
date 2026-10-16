@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: broken-service-demo
+  namespace: caredesk
+  labels:
+    purpose: troubleshooting-lab
+spec:
+  type: ClusterIP
+  # Intentionally mismatched selector — no pods will match
+  selector:
+    app: caredesk-backend-WRONG
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
